@@ -1,5 +1,11 @@
+html {
+    scroll-behavior: smooth;
+    overflow-y: hidden;
+}
 body {
-    margin: 0;
     height: 200vh;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: "Roboto", sans-serif;
+}
+a {
+    text-decoration: none;
 }
