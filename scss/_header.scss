@@ -1,22 +1,97 @@
+// import
+@use "variables" as *;
+@use "mixins" as *;
+
+// html
 header {
     width: 100%;
     height: 100vh;
+
     background: url(../assets/bg-header.webp) center/cover fixed;
+
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
 
     h1 {
-        font-size: 5rem;
+        font-size: 2rem;
+
+        @include mdScreen {
+            font-size: 4.4rem;
+        }
+
+        
+        @include lgScreen {
+            font-size: 8rem;
+        }
+    }
+
+    &::before {
+        width: 100%;
+        height: 100%;
+
+        background-color: rgba(0, 0, 0, 0.5);
+
+        content: "";
+        display: block;
+        position: absolute;
     }
 }
 
 // content
+.hederBox{
+    padding-left: 100px;
+    z-index: 1;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    flex-direction: column;
+}
+
 .tittle {
     font-weight: 400;
     letter-spacing: 5px;
     word-spacing: 10px;
-    color: white;
-    filter: drop-shadow(0 0 10px rgb(75, 75, 75));
+
     text-align: center;
+
+    color: $color3;
+}
+
+.text {
+    width: 400px;
+    margin-top: 50px;
+    margin-left: 50px;
+    line-height: 30px;
+
+    text-align: justify;
+    font-style: italic;
+
+    color: $color3;
+}
+
+.navi {
+    width: 150px;
+    height: 40px;
+    margin-top: 50px;
+    margin-left: 50px;
+    border-radius: 6px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+
+    background-color: $color3;
+    color: $color5;
+}
+
+.navi:hover {
+    background-color: $color5;
+    color: $color3;
+    
+    transition: 0.4s;
+    transform: translateX(10px);
 }
