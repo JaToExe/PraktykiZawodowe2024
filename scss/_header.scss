@@ -1,28 +1,22 @@
 header {
     width: 100%;
     height: 100vh;
-    background: url(../assets/img/bgHeader.webp) center/cover fixed;
+    background: url(../assets/bg-header.webp) center/cover fixed;
     display: flex;
     justify-content: center;
     align-items: center;
 
     h1 {
-        font-size: 3rem;
-
-        @media screen and (min-width: 680px) {
-            font-size: 5rem;
-        }
-
-        @media screen and (min-width: 2000px) {
-            font-size: 10rem;
-        }
+        font-size: 5rem;
     }
 }
 
 // content
 .tittle {
-    $color1: rgb(255, 255, 255);
-    color: $color1;
+    font-weight: 400;
+    letter-spacing: 5px;
+    word-spacing: 10px;
+    color: white;
     filter: drop-shadow(0 0 10px rgb(75, 75, 75));
     text-align: center;
 }
