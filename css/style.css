@@ -75,7 +75,7 @@ header {
   align-items: center;
 }
 header h1 {
-  font-size: 2rem;
+  font-size: 3rem;
 }
 @media screen and (min-width: 680px) {
   header h1 {
@@ -85,6 +85,7 @@ header h1 {
 @media screen and (min-width: 2000px) {
   header h1 {
     font-size: 8rem;
+    line-height: 4.8rem;
   }
 }
 header::before {
@@ -95,39 +96,52 @@ header::before {
   display: block;
   position: absolute;
 }
-
-.hederBox {
-  padding-left: 100px;
+header .hederBox {
+  padding-left: 10px;
   z-index: 1;
   display: flex;
   justify-content: space-around;
   align-items: start;
   flex-direction: column;
 }
-
-.tittle {
+@media screen and (min-width: 680px) {
+  header .hederBox {
+    padding-left: 40px;
+  }
+}
+@media screen and (min-width: 2000px) {
+  header .hederBox {
+    padding-left: 40px;
+  }
+}
+header .tittle {
+  margin-bottom: 40px;
   font-weight: 400;
   letter-spacing: 5px;
   word-spacing: 10px;
-  text-align: center;
   color: #F2E5D5;
 }
-
-.text {
-  width: 400px;
-  margin-top: 50px;
-  margin-left: 50px;
-  line-height: 30px;
-  text-align: justify;
+header .text {
+  width: 90%;
+  margin-bottom: 40px;
   font-style: italic;
   color: #F2E5D5;
 }
-
-.navi {
+@media screen and (min-width: 680px) {
+  header .text {
+    width: 60%;
+    font-size: 2rem;
+  }
+}
+@media screen and (min-width: 2000px) {
+  header .text {
+    width: 60%;
+    font-size: 2rem;
+  }
+}
+header .navi {
   width: 150px;
   height: 40px;
-  margin-top: 50px;
-  margin-left: 50px;
   border-radius: 6px;
   display: flex;
   justify-content: center;
@@ -135,12 +149,11 @@ header::before {
   text-decoration: none;
   background-color: #F2E5D5;
   color: #0D0D0D;
+  transition: 0.4s;
 }
-
-.navi:hover {
+header .navi:hover {
   background-color: #0D0D0D;
   color: #F2E5D5;
-  transition: 0.4s;
   transform: translateX(10px);
 }
 

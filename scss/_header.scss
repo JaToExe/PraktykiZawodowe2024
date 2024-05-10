@@ -14,7 +14,7 @@ header {
     align-items: center;
 
     h1 {
-        font-size: 2rem;
+        font-size: 3rem;
 
         @include mdScreen {
             font-size: 4.4rem;
@@ -23,6 +23,7 @@ header {
         
         @include lgScreen {
             font-size: 8rem;
+            line-height: 4.8rem;
         }
     }
 
@@ -36,62 +37,80 @@ header {
         display: block;
         position: absolute;
     }
-}
 
-// content
-.hederBox{
-    padding-left: 100px;
-    z-index: 1;
-
-    display: flex;
-    justify-content: space-around;
-    align-items: start;
-    flex-direction: column;
-}
-
-.tittle {
-    font-weight: 400;
-    letter-spacing: 5px;
-    word-spacing: 10px;
-
-    text-align: center;
-
-    color: $color3;
-}
-
-.text {
-    width: 400px;
-    margin-top: 50px;
-    margin-left: 50px;
-    line-height: 30px;
-
-    text-align: justify;
-    font-style: italic;
-
-    color: $color3;
-}
-
-.navi {
-    width: 150px;
-    height: 40px;
-    margin-top: 50px;
-    margin-left: 50px;
-    border-radius: 6px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    text-decoration: none;
-
-    background-color: $color3;
-    color: $color5;
-}
-
-.navi:hover {
-    background-color: $color5;
-    color: $color3;
     
-    transition: 0.4s;
-    transform: translateX(10px);
+    // content
+    .hederBox{
+        padding-left: 10px;
+        z-index: 1;
+
+        display: flex;
+        justify-content: space-around;
+        align-items: start;
+        flex-direction: column;
+
+        @include mdScreen {
+            padding-left: 40px;
+        }
+
+        
+        @include lgScreen {
+            padding-left: 40px;
+        }
+    }
+
+    .tittle {
+        margin-bottom: 40px;
+
+        font-weight: 400;
+        letter-spacing: 5px;
+        word-spacing: 10px;
+
+
+        color: $color3;
+    }
+
+    .text {
+        width: 90%;
+        margin-bottom: 40px;
+
+        font-style: italic;
+
+        color: $color3;
+
+        @include mdScreen {
+            width: 60%;
+            font-size: 2rem;
+        }
+
+        
+        @include lgScreen {
+            width: 60%;
+            font-size: 2rem;    
+        }
+    }
+
+    .navi {
+        width: 150px;
+        height: 40px;
+        border-radius: 6px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        text-decoration: none;
+
+        background-color: $color3;
+        color: $color5;
+
+        transition: 0.4s;
+    }
+
+    .navi:hover {
+        background-color: $color5;
+        color: $color3;
+        
+        transform: translateX(10px);
+    }
 }
