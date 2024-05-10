@@ -1,4 +1,6 @@
+@use "variables" as *;
+
 main {
-    height: 70vh;
-    background-color: black;
+    height: 90vh;
+    background-color: $color5;
 }

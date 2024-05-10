@@ -1,0 +1,23 @@
+@use "variables" as *;
+
+nav {
+    width: 100%;
+    padding: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    box-sizing: border-box;
+
+    background-color: $color5;
+
+    position: fixed;
+    z-index: 2;
+}
+
+.material-icons, .logo {
+    font-size: 3rem;
+
+    color: $color3;
+}

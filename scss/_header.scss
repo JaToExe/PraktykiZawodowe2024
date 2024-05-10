@@ -2,6 +2,11 @@
 @use "variables" as *;
 @use "mixins" as *;
 
+@keyframes show {
+    from {opacity: 0; transform: translateY(10px);}
+    to {opacity: 1;}
+}
+
 // html
 header {
     width: 100%;
@@ -112,5 +117,9 @@ header {
         color: $color3;
         
         transform: translateX(10px);
+    }
+
+    .tittle, .text, .navi {
+        animation: show 0.5s;
     }
 }
