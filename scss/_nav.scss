@@ -1,4 +1,27 @@
 @use "variables" as *;
+@use "mixins" as *;
+ 
+@keyframes showMenuAnomation {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes hideMenuAnomation {
+    from {
+        opacity: 1;
+        display: block;
+    }
+
+    to {
+        opacity: 0;
+        display: none;
+    }
+}
 
 nav {
     width: 100%;
@@ -16,8 +39,114 @@ nav {
     z-index: 2;
 }
 
+.material-icons-open{
+    color: rgba(0, 0, 0, 0) !important;
+}
+
 .material-icons, .logo {
+    color: $color3;
+
+    font-size: 2rem;
+
+    transition: .5s;
+
+    &:hover {
+        color: $color4
+    }
+
+    @include mdScreen {
+        font-size: 3rem;
+    }
+
+    
+    @include lgScreen {
+        font-size: 3rem;
+        line-height: 4.8rem;
+    }
+}
+
+.material-icons {
     font-size: 3rem;
 
     color: $color3;
+    
+    cursor: pointer;
+}
+
+.navigation {
+    display: none;
+
+    width: 100%;
+    height: 100vh;
+
+    background-color: $color5-transparent;
+    color: $color3;
+
+    position: fixed;
+    z-index: 3;
+
+    animation: hideMenuAnomation .5s;
+
+    @include mdScreen {
+        width: 50%;
+
+        margin-left: 50%;
+    }
+
+    
+    @include lgScreen {
+        width: 25%;
+
+        margin-left: 75%;
+    }
+}
+
+.showMenu {
+    display: block;
+
+    animation: showMenuAnomation .5s ;
+}
+
+
+.close {
+    width: 100%;
+
+    padding: 20px;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: end;
+}
+
+
+.links {
+    width: 100%;
+    font-size: 2rem;
+    padding: 20px;
+
+    box-sizing: border-box;
+
+    color: $color3;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.aBox {
+    height: 10vh;
+    padding: 20px;
+
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: .5s;
+
+    &:hover {
+        color: $color4
+    }
 }
