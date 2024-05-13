@@ -1,6 +1,19 @@
 @use "variables" as *;
 
 main {
-    height: 90vh;
     background-color: $color5;
+}
+
+section {
+    min-height: 100vh;
+
+    padding-top: 160px;
+
+    color: $color3;
+
+    h2 {
+        font-size: 2rem;
+
+        text-align: center;
+    }
 }

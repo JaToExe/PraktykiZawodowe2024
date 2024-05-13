@@ -1,16 +1,1 @@
 @use "variables" as *;
-
-footer {
-    height: 10vh;
-    background-color: $color5;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-}
-
-// content
-.back {
-    font-size: 30px;
-    margin-bottom: 10px;
-    color: white;
-}
