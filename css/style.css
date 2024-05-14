@@ -52,6 +52,62 @@ table {
   border-spacing: 0;
 }
 
+.container {
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+@media screen and (min-width: 680px) {
+  .container {
+    width: 600px;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 2000px) {
+  .container {
+    width: 1800px;
+  }
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 680px) {
+  .row {
+    flex-direction: row;
+  }
+}
+
+.col {
+  width: 100%;
+}
+@media screen and (min-width: 680px) {
+  .col-md25 {
+    flex: 0 0 25%;
+  }
+}
+@media screen and (min-width: 680px) {
+  .col-md50 {
+    flex: 0 0 50%;
+  }
+}
+@media screen and (min-width: 2000px) {
+  .col-lg25 {
+    flex: 0 0 25%;
+  }
+}
+@media screen and (min-width: 2000px) {
+  .col-lg50 {
+    flex: 0 0 50%;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
 html {
   overflow-y: hidden;
   scroll-behavior: smooth;
@@ -301,7 +357,13 @@ section {
 }
 section h2 {
   font-size: 2rem;
+  margin-bottom: 50px;
   text-align: center;
+}
+section p {
+  margin-bottom: 30px;
+  line-height: 1.4rem;
+  padding: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */
