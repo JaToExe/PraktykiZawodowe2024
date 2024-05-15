@@ -1,1 +1,17 @@
 @use "variables" as *;
+
+footer {
+    height: 30vh;
+
+    background-color: $color5;
+
+    color: $color3;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    col {
+        width: 20%;
+    }
+}

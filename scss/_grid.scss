@@ -2,7 +2,6 @@
 
 .container {
     width: 100%;
-
     padding: 0 20px;
     
     box-sizing: border-box;
@@ -34,6 +33,12 @@
     &-md25 {
         @include mdScreen {
             flex: 0 0 25%;
+        }
+    }
+
+    &-md33 {
+        @include mdScreen {
+            flex: 0 0 33.333333%;
         }
     }
 

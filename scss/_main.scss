@@ -1,7 +1,7 @@
 @use "variables" as *;
 
 main {
-    background-color: $color5;
+    background-color: white;
 }
 
 section {
@@ -9,10 +9,12 @@ section {
 
     padding-top: 160px;
 
-    color: $color3;
+    color: $color5;
 
     h2 {
-        font-size: 2rem;
+        font-size: 3rem;
+
+        font-weight: 400;
 
         margin-bottom: 50px;
 
@@ -24,5 +26,9 @@ section {
         line-height: 1.4rem;
 
         padding: 5px;
+    }
+
+    &:nth-of-type(even) {
+        background-color: whitesmoke;
     }
 }
