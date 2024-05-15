@@ -1,0 +1,38 @@
+.menuBox {
+    box-shadow: 22px 22px 62px -45px rgba(144, 144, 144, 1);
+    border-radius: 10px;
+
+    margin: 10px;
+
+    cursor: pointer;
+
+    opacity: .9;
+    transition-duration: .5s;
+
+    &:hover {
+        opacity: 1;
+        box-shadow: 22px 22px 80px -45px rgba(144, 144, 144, 1);
+    }
+
+    &Img {
+        height: 150px;
+
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+    }
+
+    @for $i from 1 to 5 {
+        .img#{$i} {
+            background: url('../assets/pizza#{$i}.webp') center/cover;
+        }
+    }
+
+    &Text {
+        height: 40px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
